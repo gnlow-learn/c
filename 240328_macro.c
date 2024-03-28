@@ -1,26 +1,30 @@
 #include <stdio.h>
 
-#define MAIN int main(void) {
-#define NIAM return 0;}
+#define main int main(void) {
+#define niam return 0;}
 
-#define FOR for
-#define ROF }
+#define for for
+#define rof }
 
-#define RANGE(I, N) (int I = 0; I<N; I++) {
-#define END }
+#define range(I, N) (int I = 0; I<N; I++) {
+#define end }
 
-#define IF
-#define THEN ?
-#define ELSE :
+#define if
+#define then ?
+#define else :
 
-#define PRINT(X) printf(X);
+#define Q(X) #X
 
-MAIN
-    FOR RANGE(i, 5)
-        PRINT(
-            IF i % 2
-            THEN "odd\n"
-            ELSE "even\n"
+#define print(...) printf(__VA_ARGS__);
+
+main
+    for range(i, 5)
+        print(
+            if i % 2
+            then "odd\n"
+            else "even\n"
         )
-    ROF
-NIAM
+    rof
+
+    if 1 then printf("") else 2;
+niam
